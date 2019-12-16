@@ -31,8 +31,8 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.button}>
+    <View style={styles.screen}>
+      <View style={styles.input}>
         <Button title="show" onPress={showHandler} />
       </View>
       <GoalInput
@@ -58,9 +58,11 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    margin: 50
+  },
   container: {
     margin: 50,
-    flex: 1,
     backgroundColor: "#fff",
     alignItems: "flex-start",
     justifyContent: "center",
@@ -72,10 +74,8 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   input: {
-    width: "80%",
-    height: 40,
-    borderBottomColor: "black",
-    borderBottomWidth: 1
+    width: "100%",
+    padding: 10
   },
   listItem: {
     padding: 10,
@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   button: {
-    margin: 30,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    width: "100%"
   }
 });
